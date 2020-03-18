@@ -1,0 +1,49 @@
+.component {
+    display: flex;
+    flex-direction: column;
+}
+
+.component h2 {
+    text-decoration: underline;
+}
+
+.component th {
+    /*border: 1px solid black;*/
+    text-decoration: underline;
+    margin: 0px;
+    width: 150px;
+}
+
+.component td {
+    border: 1px solid black;
+    margin: 0px;
+}
+
+.componentButton button {
+    position: absolute;
+    background-color: lightgreen;
+    color: black;
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 30px;
+    border: 1px solid darkgreen;
+    border-radius: 8px;
+    cursor: pointer;
+    bottom: 10px;
+}
+
+.componentButton button:active {
+    background-color: green;
+    border: 1px solid none;
+}
+
+.componentButton {
+    position: relative;
+    text-align: center;
+    height: 60px;
+}
+
+.componentTable {
+    max-height: 200px;
+    overflow-y: auto;
+}
