@@ -52,11 +52,17 @@ const LinkWithPopup = props => {
         );
     };
 
-    window.onscroll = function () {
+    window.onscroll = () => {
         if (!isLoading) {
             setLoaded(false);
         };        
-    } 
+    }; 
+
+    window.onresize = () => {
+        if (!isLoading) {
+            setLoaded(false);
+        };    
+    };
 
     return (
         <div>
