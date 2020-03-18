@@ -34,8 +34,7 @@ const LinkWithPopup = props => {
         }
     } , [isLoaded, isLoading]);
 
-    
-    style = square === null ? {} : {left: (square.x + square.width + 15), top: (square.y - 7)};
+    style = square === null ? {} : {left: (square.left + square.width + 15), top: (square.top - 7)};
 
     const children = cloneElement(props.children, {onClick: openPopup, ref: ref});
     const content = cloneElement(props.content, {clicked: clicked});
