@@ -34,17 +34,20 @@ const LinkWithPopup = props => {
         }
     } , [isLoaded, isLoading]);
 
-    style = square === null ? {} : {left: (square.left + square.width + 15), top: (square.top - 7)};
+
+    style = square === null ? {} : {left: (square.left + square.width + 15), top: (square.top - 7), "--borderColour": props.borderColour ? props.borderColour : "white"};
 
     const children = cloneElement(props.children, {onClick: openPopup, ref: ref});
     const content = cloneElement(props.content, {clicked: clicked});
 
     let popup = null;
 
+    const backdrop = {backgroundColor: props.backdropColour !== undefined ? props.backdropColour : "transparent", opacity: props.backdropOpacity ? props.backdropOpacity : 1};
+
     if (open) {
         popup = (
             <div>
-                <div className="linkwithpopupbackdrop" onClick={props.backclicked} />
+                <div className="linkwithpopupbackdrop" onClick={props.backclicked} style={backdrop}/>
                 <div onClick={props.clicked} className="linkwithpopuppopup" style={style}>
                     {content}
                 </div>

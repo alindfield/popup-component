@@ -1,31 +1,32 @@
 .linkwithpopuppopup {
     position: fixed;
     background-color: white;
+    border: 2px solid var(--borderColour);
     z-index: 200;
 }
 
 .linkwithpopuppopup::before {
-    content: "";
+    content: '';
+    display: block;  
     position: absolute;
+    border: 10px solid transparent;
+    right: 100%;
+    top: 13px;
     width: 0;
     height: 0;
-    border-width: 9px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-    top: 10px;
-    left: -18px;
+    border-right-color: var(--borderColour);
 }
 
 .linkwithpopuppopup::after {
-    content: "";
+    content: '';
+    display: block;  
     position: absolute;
+    border: 8px solid transparent;
+    right: 100%;
+    top: 15px;
     width: 0;
     height: 0;
-    border-width: 8px;
-    border-style: solid;
-    border-color: transparent white transparent transparent;
-    top: 11px;
-    left: -16px;
+    border-right-color: white;
 }
 
 .linkwithpopupbackdrop {
@@ -35,5 +36,5 @@
     z-index: 100;
     left: 0;
     top: 0;
-    background-color: rgba(0,0,0,.7)
+    background-color: var(--backdropColour);
 }

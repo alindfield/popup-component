@@ -5,10 +5,11 @@ import './content.css';
 
 const Content = () => {
     const sub = <Component clicked={null} />;
+    //rgba(0,0,0,.7)
     return (
         <div className="content">
             <div className="contentbutton">
-                <LinkWithPopup content={sub}>
+                <LinkWithPopup content={sub} borderColour="yellow" backdropColourX="black" backdropOpacityX="0.7">
                     <button>Open</button>
                 </LinkWithPopup>
             </div>
